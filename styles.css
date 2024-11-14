@@ -1,0 +1,140 @@
+/* UNIVERSAL STYLES */
+
+html {
+    font-family: "Libre Franklin";
+    font-size: 16px;
+    background-color: #FFF;
+    color: #010101;
+}
+
+main {
+    position: relative;
+    top: 3rem;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    margin: 0 1rem;
+    border: 2px solid #bdbc63;
+    border-radius: 2rem;
+    background-color: #FFF;
+    color: #bdbc63;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+button:hover {
+    color:#FFF;
+    background-color: #bdbc63;
+}
+
+button:active {
+    color:#FFF;
+    background-color: #8a8b4a;
+    border: #8a8b4a;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: "Poppins";
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+/* HEADER */
+
+header {
+    position: fixed;
+    z-index: 20;
+    background-color: #f4e7e2;
+    color: #eabec2;
+    border-bottom: 2px solid #eabec2;
+    width: 100%;
+}
+
+header .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 3rem;
+    padding: 0 1rem;
+}
+
+header .logo {
+    flex: 1;
+    font-size: 2rem;
+    font-family: "Delius Swash Caps", cursive;
+    color: #eabec2;
+    padding-left: 1rem;
+}
+
+header nav ul {
+    display: flex;
+}
+
+.desktop ul li {
+    padding-right: 2rem;
+}
+
+/* HERO SECTION */
+
+#hero-section {
+    display: flex;
+    height: 100vh;
+
+}
+
+#hero-section #right-side {
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: start;
+    justify-content: center;
+    padding-left: 2rem;
+    
+}
+
+#hero-section #left-side {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    width: 50%;
+}
+
+#hero-section p {
+    font-size: 1.5rem;
+}
+
+/* PROJECTS */
+
+#projects {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 100vh;
+    align-items: center;
+    background-color: #f4e7e2;
+}
+
+.button-container {
+    margin: 2rem;
+}
+
+.project-container {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    background-color: #eabec2;
+    mask: radial-gradient(20px at 40px 40px, transparent 98%, black) -40px -40px;
+}
