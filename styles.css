@@ -3,35 +3,36 @@
 html {
     font-family: "Libre Franklin";
     font-size: 16px;
-    background-color: #FFF;
+    background-color: #f4f2f6;
     color: #010101;
 }
 
 main {
     position: relative;
-    top: 3rem;
+    top: 5rem;
 }
 
 button {
     padding: 0.5rem 1rem;
     margin: 0 1rem;
-    border: 2px solid #bdbc63;
+    border: 2px solid #856fab;
     border-radius: 2rem;
-    background-color: #FFF;
-    color: #bdbc63;
+    background-color: #f1f1f2;
+    color: #856fab;
     font-size: 1.2rem;
     font-weight: 500;
 }
 
 button:hover {
     color:#FFF;
-    background-color: #bdbc63;
+    background-color: #c9e99c;
+    border: 2px solid #c9e99c;
 }
 
 button:active {
     color:#FFF;
-    background-color: #8a8b4a;
-    border: #8a8b4a;
+    background-color: #c9e99c;
+    border: #c9e99c;
 }
 
 h1,
@@ -53,29 +54,20 @@ h2 {
 
 /* HEADER */
 
-header {
-    position: fixed;
-    z-index: 20;
-    background-color: #f4e7e2;
-    color: #eabec2;
-    border-bottom: 2px solid #eabec2;
-    width: 100%;
-}
-
 header .content {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    height: 3rem;
+    height: 5rem;
     padding: 0 1rem;
 }
 
 header .logo {
-    flex: 1;
     font-size: 2rem;
     font-family: "Delius Swash Caps", cursive;
-    color: #eabec2;
+    color: #856fab;
     padding-left: 1rem;
+    padding-right: 15rem;
 }
 
 header nav ul {
@@ -105,6 +97,10 @@ header nav ul {
     
 }
 
+#right-side .text-container {
+    width: 80%;
+}
+
 #hero-section #left-side {
     display: flex;
     align-items: center;
@@ -122,19 +118,131 @@ header nav ul {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    height: 100vh;
     align-items: center;
-    background-color: #f4e7e2;
+    height: 100vh;
+    background-color: #cec8ef;
 }
 
 .button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin: 2rem;
 }
 
-.project-container {
+.arrow {
+    padding: 1.5rem 2rem;
+    border-radius: 50%;
+}
+
+
+
+
+/* CARDS */
+
+.project-cards-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-card {
     position: relative;
-    width: 400px;
-    height: 400px;
-    background-color: #eabec2;
-    mask: radial-gradient(20px at 40px 40px, transparent 98%, black) -40px -40px;
+    display: block;
+    height: 100%;
+    max-height: 31.25rem;
+    border-radius: 40px;
+    margin: 3rem;
+    overflow: hidden;
+}
+
+.card-image {
+    width: 100%;
+    height: auto;
+}
+
+.card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;      
+    border-radius: 40px;    
+    background-color: #b2dbe9;      
+    transform: translateY(100%);
+    transition: .2s ease-in-out;
+  }
+
+  .project-card:hover .card-overlay {
+    transform: translateY(0);
+  }
+
+  .card-header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    padding: 2em;
+    border-radius: 40px 0 0 0;    
+    background-color: #b2dbe9;
+    transform: translateY(-100%);
+    transition: .2s ease-in-out;
+  }
+
+  .card-header-arc {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    bottom: 100%;
+    right: 0;      
+    z-index: 1;
+  }
+
+  .card-header-arc path {
+    fill: #b2dbe9;
+    d: path("M 40 80 c 22 0 40 -22 40 -40 v 40 Z");
+  } 
+
+  .project-card:hover .card-header {
+    transform: translateY(0);
+  }
+
+  .card-title {
+    font-size: 1em;
+    margin: 0 0 .3em;
+    color: #6A515E;
+  }
+
+  .card-description {
+    display: block;
+    margin: 1em 0;  
+    font-size: .8em; 
+    color: black;  
+  }
+
+  .card-stack-description {
+    text-align: center;
+    display: block;
+    font-size: .8em; 
+    color: black;  
+  }
+
+  .card-github {
+    margin: 1rem 6rem;
+  }
+
+  /* CONTACT */
+
+  #contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #b2dbe9;
+  }
+
+#contact .contact-container {
+    background-color: #f4f2f6;
+    width: 65%;
+    height: 40%;
 }
