@@ -52,6 +52,20 @@ h2 {
     font-weight: 500;
 }
 
+.decoration-section {
+    position: absolute;
+    width: 100%;
+    bottom: -0.3125rem;
+} 
+
+.decoration-section img {
+    display: block;
+    width: 100%;
+} 
+
+
+
+
 /* HEADER */
 
 header .content {
@@ -83,7 +97,7 @@ header nav ul {
 #hero-section {
     display: flex;
     height: 100vh;
-
+    position: relative;
 }
 
 #hero-section #right-side {
@@ -112,14 +126,72 @@ header nav ul {
     font-size: 1.5rem;
 }
 
+/* HERO SECTION - AVATAR */
+
+.avatar-container {
+    position: relative;
+    width: 28.125rem;
+    height: 37.5rem;
+}
+
+.avatar {
+    position: absolute;
+    z-index: 5;
+    top: 128px;
+    right: 85px;
+    width: 70%;
+}
+
+.first.blob {
+    width: 505px;
+    height: 375px;
+    position: absolute;
+    top: 32px;
+    z-index: 3;
+  }
+
+.first.blob path {
+    fill: #cec8ef;
+    d: path("M623.645,268.095c-3.108,-77.31 39.892,-279.095 261.592,-253.183c245.11,28.648 539.652,118.408 661.468,136.745c259.335,39.04 546.628,-38.658 743.193,-16.1c148.003,16.985 353.033,239.545 134.98,443.83c-202.84,190.032 -663.917,1134.13 -1202.29,1259.22c-610.07,141.488 -1257.8,-238.287 -1209.72,-641.373c17.53,-146.963 69.46,-272.942 238.515,-336.385c89.852,-33.718 255.052,-115.297 366.62,-233.307c106.053,-112.178 8.34,-291.264 5.64,-359.448 Z");
+
+} 
+
+.second.blob {
+    display: block;
+    position: absolute;
+    z-index: 4;
+    width: 100%;
+    top: 0;
+}
+
+.third.blob {
+    position: absolute;
+    display: block;
+    z-index: 2;
+    top: 25px;
+    right: 8px;
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
 /* PROJECTS */
+
+
 
 #projects {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
-    height: 100vh;
+    position: relative;
+    height: 125vh;
     background-color: #cec8ef;
 }
 
@@ -127,7 +199,7 @@ header nav ul {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 2rem;
+    margin: 3rem 0;
 }
 
 .arrow {
@@ -237,12 +309,13 @@ header nav ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 80vh;
     background-color: #b2dbe9;
   }
 
 #contact .contact-container {
     background-color: #f4f2f6;
-    width: 65%;
-    height: 40%;
+    width: 55%;
+    height: 50%;
 }
+
