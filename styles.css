@@ -52,6 +52,11 @@ h2 {
     font-weight: 500;
 }
 
+h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
 .decoration-section {
     position: absolute;
     width: 100%;
@@ -100,7 +105,7 @@ header nav ul {
     position: relative;
 }
 
-#hero-section #right-side {
+#hero-section .right-side {
     display: flex;
     width: 50%;
     flex-direction: column;
@@ -111,11 +116,11 @@ header nav ul {
     
 }
 
-#right-side .text-container {
+.right-side .text-container {
     width: 80%;
 }
 
-#hero-section #left-side {
+#hero-section .left-side {
     display: flex;
     align-items: center;
     justify-content: end;
@@ -129,55 +134,28 @@ header nav ul {
 /* HERO SECTION - AVATAR */
 
 .avatar-container {
+    display: flex;
+    justify-content: end;
+    align-items: center;
     position: relative;
-    width: 28.125rem;
-    height: 37.5rem;
+    width: 30rem;
+    height: 20rem;
 }
 
 .avatar {
     position: absolute;
-    z-index: 5;
-    top: 128px;
-    right: 85px;
-    width: 70%;
-}
-
-.first.blob {
-    width: 505px;
-    height: 375px;
-    position: absolute;
-    top: 32px;
-    z-index: 3;
-  }
-
-.first.blob path {
-    fill: #cec8ef;
-    d: path("M623.645,268.095c-3.108,-77.31 39.892,-279.095 261.592,-253.183c245.11,28.648 539.652,118.408 661.468,136.745c259.335,39.04 546.628,-38.658 743.193,-16.1c148.003,16.985 353.033,239.545 134.98,443.83c-202.84,190.032 -663.917,1134.13 -1202.29,1259.22c-610.07,141.488 -1257.8,-238.287 -1209.72,-641.373c17.53,-146.963 69.46,-272.942 238.515,-336.385c89.852,-33.718 255.052,-115.297 366.62,-233.307c106.053,-112.178 8.34,-291.264 5.64,-359.448 Z");
-
-} 
-
-.second.blob {
-    display: block;
-    position: absolute;
-    z-index: 4;
-    width: 100%;
-    top: 0;
-}
-
-.third.blob {
-    position: absolute;
-    display: block;
+    top: 3.25rem;
+    right: 7.5rem;
+    width: 19rem;
+    height: 19rem;
     z-index: 2;
-    top: 25px;
-    right: 8px;
-    width: 100%;
 }
 
-
-
-
-
-
+.background-blob {
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+}
 
 
 
@@ -307,6 +285,7 @@ header nav ul {
 
   #contact {
     display: flex;
+    position: relative;
     justify-content: center;
     align-items: center;
     height: 80vh;
@@ -314,8 +293,73 @@ header nav ul {
   }
 
 #contact .contact-container {
+    display: flex;
+    position: relative;
     background-color: #f4f2f6;
-    width: 55%;
-    height: 50%;
+    padding: 3rem 4rem;
 }
 
+
+#contact .contact-container .right-side {
+    display: flex;
+    position: relative;
+    width: 50%;
+    align-items: center;
+    justify-content: start;
+    padding-left: 2rem;
+    
+}
+
+#contact .contact-container .left-side {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: end;
+    width: 50%;
+}
+
+#contact .contact-container .left-side .text-container {
+    line-height: 1.5;
+}
+
+
+#contact .right-side .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 30rem;
+    height: 20rem;
+}
+
+.mailbox {
+    display: block;
+    position: absolute;
+    width: 50%;
+    z-index: 2;
+}
+
+.mail {
+    display: block;
+    position: absolute;
+    width: 20%;
+    top: 4.5rem;
+    left: 6.5rem;
+    z-index: 3;
+}
+
+.flapper {
+    display: block;
+    position: absolute;
+    width: 15%;
+    top: 5.5rem;
+    left: 15.8rem;
+    z-index: 3;
+}
+
+.mail-background-blob {
+    display: block;
+    position: absolute;
+    width: 90%;
+    z-index: 1;
+}
