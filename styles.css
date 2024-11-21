@@ -300,7 +300,7 @@ button.arrow {
     width: 100%;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 699px) {
 
     .arrow .icon-container{
         width: 1rem;
@@ -429,7 +429,7 @@ button.arrow {
     }
   }
 
-  @media only screen and (min-width:501px) and (max-width: 999px) {
+  @media only screen and (min-width:700px) and (max-width: 999px) {
     .project-card.three {
         display: none;
     }
@@ -439,17 +439,18 @@ button.arrow {
     }
   }
 
-  @media only screen and (max-width: 500px) {
+  @media only screen and (max-width: 699px) {
     .project-card.three, 
     .project-card.two {
         display: none;
     }
-
     .project-card {
         margin: .5rem;
     }
 
   }
+
+
 
 
   /* CONTACT */
@@ -533,7 +534,7 @@ button.arrow {
     height: 20rem;
 }
 
-@media only screen and (min-width: 800px) and (max-width: 1049px) {
+@media only screen and (min-width: 785px) and (max-width: 1049px) {
 
     .contact-container {
         padding: .5rem;
@@ -544,6 +545,7 @@ button.arrow {
         width: 60%;
         padding: 1rem;
     }
+
 
     .contact-container .left-side .text-container {
         max-width: 30rem;
@@ -557,7 +559,7 @@ button.arrow {
 
 }
 
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 784px) {
 
     #contact {
         height: 90vh;
@@ -574,13 +576,12 @@ button.arrow {
 
     .contact-container .left-side {
         width: 100%;
-        height: 40%;
         padding: 0;
     }
 
     .contact-container .left-side .text-container {
         max-width: 30rem;
-        padding: 2rem;
+        padding: 2rem 2rem .5rem 2rem;
     }
 
     .contact-container .left-side .text-container p {
@@ -588,10 +589,13 @@ button.arrow {
     }
 
     #contact .right-side .image-container {
+        margin-top: 1rem;
         width: 20rem;
-        height: 7rem;
+        height: 10rem;
     }
 }
+
+
 
   /* CONTACT - MAILBOX ILLUSTRATION */
 
@@ -627,7 +631,7 @@ button.arrow {
     z-index: 1;
 }
 
-@media only screen and (min-width: 800px) and (max-width: 1049px) {
+@media only screen and (min-width: 785px) and (max-width: 1049px) {
 
     .mail {
         top: 2.7rem;
@@ -642,7 +646,7 @@ button.arrow {
 
 }
 
-@media only screen and (max-width: 750px) {
+@media only screen and (min-width: 426px) and (max-width:784px) {
 
     .mail-background-blob {
         bottom: 0;
@@ -655,12 +659,35 @@ button.arrow {
     }
 
     .mail {
-        top: 0;
-        left: 1.5rem;
+        top: 5%;
+        left: 15%;
     }
 
     .flapper {
-        top: 0.3rem;
-        left: 5.8rem;
+        top: 11%;
+        left: 43%;
+    
+}
+
+@media only screen and (max-width: 425px) {
+
+    .mail-background-blob {
+        bottom: 0;
+        left: 0;
+    }
+
+    .mailbox {
+        bottom: 1.5rem;
+        left: 2.1rem;
+    }
+
+    .mail {
+        top: 30%;
+        left: 21%;
+    }
+
+    .flapper {
+        top: 35%;
+        left: 50%;
     }
 }
