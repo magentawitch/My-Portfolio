@@ -7,10 +7,6 @@ html {
     color: #010101;
 }
 
-main {
-    position: relative;
-    top: 5rem;
-}
 
 button,
 .button {
@@ -83,14 +79,18 @@ h4 {
 
 header .content {
     display: flex;
+    position: relative;
     justify-content: space-around;
     align-items: center;
     height: 5rem;
     padding: 0 1rem;
+    top: 4rem;
+    z-index: 5;
+    
 }
 
 header .logo {
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-family: "Delius Swash Caps", cursive;
     color: #856fab;
     padding-left: 1rem;
@@ -102,7 +102,43 @@ header nav ul {
 }
 
 .desktop ul li {
-    padding-right: 2rem;
+    padding-right: 1.7rem;
+    font-size: 1.5rem;
+}
+
+.desktop ul li a:hover {
+    color: #856fab;
+    z-index: 10;
+}
+
+@media only screen and (max-width: 999px) {
+    header .content {
+        display: flex;
+        position: relative;
+        justify-content: space-around;
+        align-items: center;
+        height: 0px;
+    }
+
+    header .logo {
+        display: none;
+    }
+
+    nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        bottom: 0;
+        background-color: #f4f2f6;
+        border: 2px solid #6A515E;
+        width: 100%;
+        padding: 1rem;
+    }
+
+    nav ul li a{
+        font-size: 1rem;
+    }
 }
 
 /* HERO SECTION */
@@ -118,7 +154,7 @@ header nav ul {
     width: 50%;
     flex-direction: column;
     flex-wrap: wrap;
-    align-items: start;
+    align-items: center;
     justify-content: center;
     padding-left: 2rem;
     
@@ -138,6 +174,43 @@ header nav ul {
 #hero-section p {
     font-size: 1.5rem;
 }
+
+@media only screen and (max-width: 999px) {
+    #hero-section {
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    #hero-section .right-side {
+        align-items: center;
+        justify-content: center;
+        margin-top: 3rem;
+        padding-left: 0;
+        width: 100%;        
+    }
+
+    #hero-section .left-side {
+        display: flex;
+        margin-top: 7rem;
+        margin-bottom: 1rem;
+        align-items: start;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .right-side .text-container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        line-height: 1.2;
+    }
+
+
+}
+
 
 /* HERO SECTION - AVATAR */
 
@@ -165,6 +238,19 @@ header nav ul {
     z-index: 1;
 }
 
+@media only screen and (max-width: 800px) {
+    .avatar-container {
+        width: 25rem;
+        height: 16.67rem;
+    }
+
+    .avatar {
+        width: 15.83rem;
+        height: 15.83rem;
+        top: 2.7rem;
+        left: 3rem;
+    }
+}
 
 
 /* PROJECTS */
@@ -183,7 +269,7 @@ header nav ul {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 3rem 0;
+    margin: 5rem 0;
 }
 
 button.arrow {
@@ -195,17 +281,15 @@ button.arrow {
     justify-content: center;
     align-items: center;
     padding: .5rem .1rem;
-    width: 3.125rem;
-    height: 3.125rem;
+    width: 1.5rem;
+    height: 1.5rem;
     overflow: hidden;
 }
 
 .icon-container .arrow {
     display: block;
     width: 100%;
-    object-fit: contain;
 }
-
 
 
 /* CARDS */
@@ -221,7 +305,7 @@ button.arrow {
     display: block;
     height: 100%;
     max-height: 31.25rem;
-    border-radius: 40px;
+    border-radius: 2.5rem;
     margin: 3rem;
     overflow: hidden;
 }
@@ -237,10 +321,13 @@ button.arrow {
     left: 0;
     right: 0;
     z-index: 1;      
-    border-radius: 40px;    
-    background-color: #b2dbe9;      
+    border-radius: 2.5rem;    
+    background-color: #b2dbe9;    
     transform: translateY(100%);
     transition: .2s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
   }
 
   .project-card:hover .card-overlay {
@@ -253,17 +340,17 @@ button.arrow {
     align-items: center;
     gap: 2em;
     padding: 2em;
-    border-radius: 40px 0 0 0;    
+    border-radius: 2.5rem 0 0 0;    
     background-color: #b2dbe9;
     transform: translateY(-100%);
     transition: .2s ease-in-out;
   }
 
   .card-header-arc {
-    width: 80px;
-    height: 80px;
+    width: 5rem;
+    height: 5rem;
     position: absolute;
-    bottom: 100%;
+    bottom: 99%;
     right: 0;      
     z-index: 1;
   }
@@ -278,9 +365,9 @@ button.arrow {
   }
 
   .card-title {
-    font-size: 1em;
+    font-size: 1.2rem;
     margin: 0 0 .3em;
-    color: #6A515E;
+    color: #483E40;
   }
 
   .card-description {
@@ -291,14 +378,47 @@ button.arrow {
   }
 
   .card-stack-description {
-    text-align: center;
-    display: block;
-    font-size: .8em; 
+    align-self: center;
+    justify-self: center;
+    font-size: .8rem; 
     color: black;  
   }
 
+
   .card-github {
-    margin: 1rem 6rem;
+    align-self: center;
+    justify-self: center;
+    margin: 1rem;
+  }
+
+  button.card-github {
+    border: none;
+    width: 3rem;
+    height: 3rem;
+    padding: .5rem;
+    overflow: hidden;
+  }
+
+  button.card-github img {
+    display: block;
+    width: 100%;
+  }
+
+
+  @media only screen and (min-width: 1000px) and (max-width: 1200px) {
+    .project-card {
+        margin: 1.5rem;
+    }
+  }
+
+  @media only screen and (max-width: 999px) {
+    .project-card.one {
+        display: none;
+    }
+
+    .project-card {
+        margin: 1rem;
+    }
   }
 
   /* CONTACT */
@@ -312,7 +432,7 @@ button.arrow {
     background-color: #b2dbe9;
   }
 
-#contact .contact-container {
+.contact-container {
     display: flex;
     position: relative;
     background-color: #f4f2f6;
@@ -321,7 +441,7 @@ button.arrow {
 }
 
 
-#contact .contact-container .right-side {
+.contact-container .right-side {
     display: flex;
     position: relative;
     width: 50%;
@@ -331,14 +451,14 @@ button.arrow {
     
 }
 
-#contact .contact-container .left-side {
+.contact-container .left-side {
     display: flex;
     position: relative;
     width: 50%;
     padding: 1rem;
 }
 
-#contact .contact-container .left-side .text-container {
+.contact-container .left-side .text-container {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -353,13 +473,13 @@ button.arrow {
 
 .socials-icon {
     display: flex;
+    margin-top: .5rem;
 }
 
 .socials-icon .icon-container{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: .5rem .1rem;
     width: 2rem;
     height: 2rem;
     padding: .25rem .5rem;
@@ -373,7 +493,7 @@ button.arrow {
     object-fit: contain;
 }
 
-#contact .right-side .image-container {
+.contact-container .right-side .image-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -381,6 +501,33 @@ button.arrow {
     width: 30rem;
     height: 20rem;
 }
+
+@media only screen and (max-width: 1049px) {
+
+    .contact-container {
+        padding: .5rem;
+        margin: 2rem;
+    }
+
+    .contact-container .left-side {
+        width: 60%;
+        padding: 1rem;
+    }
+
+
+    .contact-container .left-side .text-container {
+        max-width: 30rem;
+        padding: 2rem;
+    }
+
+    .contact-container .right-side .image-container {
+        width: 20rem;
+        height: 13.33rem;
+    }
+
+}
+
+  /* CONTACT - MAILBOX ILLUSTRATION */
 
 .mailbox {
     display: block;
@@ -403,7 +550,7 @@ button.arrow {
     position: absolute;
     width: 15%;
     top: 5.5rem;
-    left: 15.8rem;
+    left: 17rem;
     z-index: 3;
 }
 
@@ -412,4 +559,19 @@ button.arrow {
     position: absolute;
     width: 90%;
     z-index: 1;
+}
+
+@media only screen and (max-width: 1049px) {
+
+    .mail {
+        top: 2.7rem;
+        left: 5.3rem;
+        z-index: 3;
+    }
+    
+    .flapper {
+        top: 3.62rem;
+        left: 11.4rem;
+    }
+
 }
