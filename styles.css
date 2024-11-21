@@ -207,8 +207,17 @@ header nav ul {
         justify-content: center;
         line-height: 1.2;
     }
+}
 
+@media only screen and (max-width: 500px) {
+    .right-side .text-container {
+        margin-top: 1.5rem;
+    }
 
+        #hero-section p {
+            font-size: 1.2rem;
+            text-align: center;
+        }
 }
 
 
@@ -290,6 +299,15 @@ button.arrow {
     display: block;
     width: 100%;
 }
+
+@media only screen and (max-width: 500px) {
+
+    .arrow .icon-container{
+        width: 1rem;
+        height: 1rem;
+    }
+    
+  }
 
 
 /* CARDS */
@@ -411,8 +429,8 @@ button.arrow {
     }
   }
 
-  @media only screen and (max-width: 999px) {
-    .project-card.one {
+  @media only screen and (min-width:501px) and (max-width: 999px) {
+    .project-card.three {
         display: none;
     }
 
@@ -420,6 +438,19 @@ button.arrow {
         margin: 1rem;
     }
   }
+
+  @media only screen and (max-width: 500px) {
+    .project-card.three, 
+    .project-card.two {
+        display: none;
+    }
+
+    .project-card {
+        margin: .5rem;
+    }
+
+  }
+
 
   /* CONTACT */
 
@@ -502,7 +533,7 @@ button.arrow {
     height: 20rem;
 }
 
-@media only screen and (max-width: 1049px) {
+@media only screen and (min-width: 800px) and (max-width: 1049px) {
 
     .contact-container {
         padding: .5rem;
@@ -514,7 +545,6 @@ button.arrow {
         padding: 1rem;
     }
 
-
     .contact-container .left-side .text-container {
         max-width: 30rem;
         padding: 2rem;
@@ -525,6 +555,42 @@ button.arrow {
         height: 13.33rem;
     }
 
+}
+
+@media only screen and (max-width: 750px) {
+
+    #contact {
+        height: 90vh;
+    }
+
+    .contact-container {
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+        margin: .75rem;
+    }
+
+    .contact-container .left-side {
+        width: 100%;
+        height: 40%;
+        padding: 0;
+    }
+
+    .contact-container .left-side .text-container {
+        max-width: 30rem;
+        padding: 2rem;
+    }
+
+    .contact-container .left-side .text-container p {
+        margin-top: .5rem;
+    }
+
+    #contact .right-side .image-container {
+        width: 20rem;
+        height: 7rem;
+    }
 }
 
   /* CONTACT - MAILBOX ILLUSTRATION */
@@ -561,7 +627,7 @@ button.arrow {
     z-index: 1;
 }
 
-@media only screen and (max-width: 1049px) {
+@media only screen and (min-width: 800px) and (max-width: 1049px) {
 
     .mail {
         top: 2.7rem;
@@ -574,4 +640,27 @@ button.arrow {
         left: 11.4rem;
     }
 
+}
+
+@media only screen and (max-width: 750px) {
+
+    .mail-background-blob {
+        bottom: 0;
+        left: 0;
+    }
+
+    .mailbox {
+        bottom: 1.5rem;
+        left: 2.1rem;
+    }
+
+    .mail {
+        top: 0;
+        left: 1.5rem;
+    }
+
+    .flapper {
+        top: 0.3rem;
+        left: 5.8rem;
+    }
 }
