@@ -12,7 +12,8 @@ main {
     top: 5rem;
 }
 
-button {
+button,
+.button {
     padding: 0.5rem 1rem;
     margin: 0 1rem;
     border: 2px solid #856fab;
@@ -23,14 +24,16 @@ button {
     font-weight: 500;
 }
 
-button:hover {
-    color:#FFF;
+button:hover,
+.button:hover {
+    color: #6D5E61;
     background-color: #c9e99c;
     border: 2px solid #c9e99c;
 }
 
-button:active {
-    color:#FFF;
+button:active,
+.button:active {
+    color: #6D5E61;
     background-color: #c9e99c;
     border: #c9e99c;
 }
@@ -166,8 +169,6 @@ header nav ul {
 
 /* PROJECTS */
 
-
-
 #projects {
     display: flex;
     flex-direction: column;
@@ -185,9 +186,24 @@ header nav ul {
     margin: 3rem 0;
 }
 
-.arrow {
-    padding: 1.5rem 2rem;
+button.arrow {
     border-radius: 50%;
+}
+
+.icon-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .5rem .1rem;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+}
+
+.icon-container .arrow {
+    display: block;
+    width: 100%;
+    object-fit: contain;
 }
 
 
@@ -357,7 +373,7 @@ header nav ul {
     display: block;
     position: absolute;
     width: 20%;
-    top: 4.5rem;
+    top: 4.1rem;
     left: 6.5rem;
     z-index: 3;
 }
