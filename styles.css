@@ -72,7 +72,17 @@ h4 {
     width: 100%;
 } 
 
+@media only screen and (max-width: 424px) {
+    html {
+        font-size: 13px;
+    }
+}
 
+@media only screen and (max-width: 350px) {
+    html {
+        font-size: 12px;
+    }
+}
 
 
 /* HEADER */
@@ -440,6 +450,7 @@ button.arrow {
   }
 
   @media only screen and (max-width: 699px) {
+
     .project-card.three, 
     .project-card.two {
         display: none;
@@ -449,7 +460,6 @@ button.arrow {
     }
 
   }
-
 
 
 
@@ -480,7 +490,6 @@ button.arrow {
     align-items: center;
     justify-content: start;
     padding: 1rem;
-    
 }
 
 .contact-container .left-side {
@@ -595,7 +604,45 @@ button.arrow {
     }
 }
 
+@media only screen and (min-width: 520px) and (max-width: 784px) {
 
+    #contact .right-side .image-container {
+        min-width: 17rem;
+        min-height: 10rem;
+    }
+}
+
+@media only screen and (min-width: 425px) and (max-width: 519px) {
+   
+    #contact .right-side .image-container {
+        width: 11.53125rem;
+        height: 10rem;
+        min-width: 11.53125rem;
+        min-height: 10rem;
+    }
+}
+
+@media only screen and (min-width: 351px) and (max-width: 424px) {
+
+    #contact .right-side .image-container {
+        width: 14.48rem;
+        height: 10rem;
+        min-width: 14.48rem;
+        min-height: 10rem;
+    }
+
+}
+
+@media only screen and (max-width: 350px) {
+
+    #contact .right-side .image-container {
+        width: 12.83rem;
+        height: 10rem;
+        min-width: 12.83rem;
+        min-height: 10rem;
+    }
+
+}
 
   /* CONTACT - MAILBOX ILLUSTRATION */
 
@@ -646,7 +693,7 @@ button.arrow {
 
 }
 
-@media only screen and (min-width: 426px) and (max-width:784px) {
+@media only screen and (min-width: 520px) and (max-width:784px) {
 
     .mail-background-blob {
         bottom: 0;
@@ -654,22 +701,23 @@ button.arrow {
     }
 
     .mailbox {
-        bottom: 1.5rem;
-        left: 2.1rem;
+        bottom: 15%;
+        left: 18%;
     }
 
     .mail {
-        top: 5%;
-        left: 15%;
+        top: 4%;
+        left: 18%;
     }
 
     .flapper {
         top: 11%;
-        left: 43%;
-    
+        left: 49%;
+    }
 }
 
-@media only screen and (max-width: 425px) {
+
+@media only screen and (min-width: 425px) and (max-width: 519px) {
 
     .mail-background-blob {
         bottom: 0;
@@ -677,8 +725,8 @@ button.arrow {
     }
 
     .mailbox {
-        bottom: 1.5rem;
-        left: 2.1rem;
+        bottom: 15%;
+        left: 18%;
     }
 
     .mail {
@@ -689,5 +737,51 @@ button.arrow {
     .flapper {
         top: 35%;
         left: 50%;
+    }
+}
+
+@media only screen and (min-width: 351px) and (max-width: 424px) {
+
+    .mail-background-blob {
+        bottom: 0;
+        left: 0;
+    }
+
+    .mailbox {
+        bottom: 15%;
+        left: 18%;
+    }
+
+    .mail {
+        top: 16%;
+        left: 21%;
+    }
+
+    .flapper {
+        top: 23%;
+        left: 50%;
+    }
+}
+
+@media only screen and (max-width: 350px)  {
+
+    .mail-background-blob {
+        bottom: 0;
+        left: 0;
+    }
+
+    .mailbox {
+        bottom: 15%;
+        left: 18%;
+    }
+
+    .mail {
+        top: 23%;
+        left: 20%;
+    }
+
+    .flapper {
+        top: 30%;
+        left: 49%;
     }
 }
