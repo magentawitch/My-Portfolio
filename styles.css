@@ -31,7 +31,7 @@ button:active,
 .button:active {
     color: #6D5E61;
     background-color: #c9e99c;
-    border: #c9e99c;
+    border: 2px solid #c9e99c;
 }
 
 h1,
@@ -92,19 +92,19 @@ header .content {
     position: relative;
     justify-content: space-around;
     align-items: center;
-    height: 5rem;
     padding: 0 1rem;
-    top: 4rem;
     z-index: 5;
     
 }
 
 header .logo {
+    display: none;
     font-size: 2.5rem;
     font-family: "Delius Swash Caps", cursive;
     color: #856fab;
     padding-left: 1rem;
     padding-right: 15rem;
+
 }
 
 header nav ul {
@@ -112,14 +112,45 @@ header nav ul {
 }
 
 .desktop ul li {
-    padding-right: 1.7rem;
+    padding: 0 0.8rem;
     font-size: 1.5rem;
 }
 
+.desktop ul li a {
+    color: #6D5E61;;
+}
 .desktop ul li a:hover {
     color: #856fab;
     z-index: 10;
 }
+
+@media only screen and (min-width: 1000px) {
+
+    header nav {
+        background-image: url("Resources/SVG/nav backround.svg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: center;
+        padding: 5rem 2rem;
+        border-radius: 2.5rem;
+        overflow: visible;
+    }
+
+    header nav ul {
+        display: flex;
+        position: relative;
+        top: .5rem;
+        
+    }
+
+    header .content {
+        align-items: start;
+        justify-content: end;
+        padding: 0 4rem 0 0;   
+        top: 1.5rem;     
+    }
+}
+
 
 @media only screen and (max-width: 999px) {
     header .content {
@@ -155,7 +186,7 @@ header nav ul {
 
 #hero-section {
     display: flex;
-    height: 100vh;
+    height: 80vh;
     position: relative;
 }
 
@@ -167,11 +198,10 @@ header nav ul {
     align-items: center;
     justify-content: center;
     padding-left: 2rem;
-    
 }
 
 .right-side .text-container {
-    width: 80%;
+    width: 70%;
 }
 
 #hero-section .left-side {
@@ -185,11 +215,20 @@ header nav ul {
     font-size: 1.5rem;
 }
 
+@media only screen and (min-width: 1000px) {
+    #hero-section .right-side,
+    #hero-section .left-side {
+        position: relative;
+        bottom: 6rem;
+    }
+}
+
 @media only screen and (max-width: 999px) {
     #hero-section {
         flex-direction: column;
         flex-wrap: wrap;
         align-items: center;
+        height: 100vh;
     }
 
     #hero-section .right-side {
