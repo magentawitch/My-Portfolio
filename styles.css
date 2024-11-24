@@ -556,6 +556,12 @@ button.arrow {
     margin-top: 1.5rem;
 }
 
+a.email {
+    color: #856fab;
+    font-weight: bold;
+}
+
+
 .socials-icon {
     display: flex;
     margin-top: .5rem;
