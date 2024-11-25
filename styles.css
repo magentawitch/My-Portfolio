@@ -118,14 +118,14 @@ header nav ul {
 }
 
 .desktop ul li a {
-    color: #6D5E61;
+    color: #483E40;
     padding: 0 2rem;
     font-family: "Karla";
     font-weight: 600;
     font-size: 2rem;
 }
 .desktop ul li a:hover {
-    color: #856fab;
+    color: #655482;
     z-index: 10;
 }
 
