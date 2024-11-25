@@ -3,7 +3,9 @@
 <html lang="en-us">
 
 <head>
-    <link href="https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&family=Karla:ital,wght@0,200..800;1,200..800&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Madimi+One&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&family=Karla:ital,wght@0,200..800;1,200..800&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Madimi+One&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="icon"
@@ -33,13 +35,13 @@
     <main>
         <div id="hero-section">
             <div class="left-side">
-                <div class="avatar-container"> 
+                <div class="avatar-container">
                     <img class="avatar" src="Resources/SVG/complete mel.svg">
                     <img class="background-blob" src="Resources/SVG/blob complete.svg">
 
                 </div>
             </div>
-        
+
             <div class="right-side">
                 <div class="text-container">
                     <h1>Hi, I'm Meli!</h1>
@@ -50,15 +52,17 @@
         </div>
 
         <!-- PROJECTS -->
-        
+
         <div id="projects">
             <div class="button-container">
-                <button>Frontend</button>
-                <button>Games</button>
+                <button id="webDev">Web Dev</button>
+                <button id="games">Games</button>
             </div>
 
             <div class="project-cards-container">
-                <button class="arrow"><div class="icon-container"><img class="arrow" src="Resources/SVG/Icon/left arrow.svg"></div></button>
+                <button class="arrow" id="left-arrow">
+                    <div class="icon-container"><img class="arrow" src="Resources/SVG/Icon/left arrow.svg"></div>
+                </button>
                 <div class="project-card one">
                     <img src="https://placecats.com/300/500" class="card-image" alt="">
                     <div class="card-overlay">
@@ -75,8 +79,10 @@
                                     quos</p>
                             </div>
                         </div>
-                        <p class="card-stack-description">BLABLA, BLABLA</p>
-                        <button class="card-github"><a href=""><img class="github" src="Resources/SVG/Icon/github.png"></a></button>
+                        <p class="card-stack-description"><span class="bold">Stack: </span><span
+                                class="stack-description">stack</span></p>
+                        <button class="card-github"><a class="github-link" href="" target="_blank"><img class="github"
+                                    src="Resources/SVG/Icon/github.png"></a></button>
                     </div>
                 </div>
 
@@ -96,11 +102,13 @@
                                     quos</p>
                             </div>
                         </div>
-                        <p class="card-stack-description">BLABLA, BLABLA</p>
-                        <button class="card-github"><a href=""><img class="github" src="Resources/SVG/Icon/github.png"></a></button>
+                        <p class="card-stack-description"><span class="bold">Stack: </span><span
+                                class="stack-description">stack</span></p>
+                        <button class="card-github"><a class="github-link" href="" target="_blank"><img class="github"
+                                    src="Resources/SVG/Icon/github.png"></a></button>
                     </div>
                 </div>
-                
+
                 <div class="project-card three">
                     <img src="https://placecats.com/300/500" class="card-image" alt="">
                     <div class="card-overlay">
@@ -117,42 +125,50 @@
                                     quos</p>
                             </div>
                         </div>
-                        <p class="card-stack-description">BLABLA, BLABLA</p>
-                        <button class="card-github"><a href=""><img class="github" src="Resources/SVG/Icon/github.png"></a></button>
+                        <p class="card-stack-description"><span class="bold">Stack: </span><span
+                                class="stack-description">stack</span></p>
+                        <button class="card-github"><a class="github-link" href="" target="_blank"><img class="github"
+                                    src="Resources/SVG/Icon/github.png"></a></button>
                     </div>
                 </div>
-                
-                <button class="arrow"><div class="icon-container"><img class="arrow" src="Resources/SVG/Icon/right arrow.svg"></div></button>
+
+                <button class="arrow" id="right-arrow">
+                    <div class="icon-container"><img class="arrow" src="Resources/SVG/Icon/right arrow.svg"></div>
+                </button>
             </div>
             <div class="decoration-section blue"><img src="Resources/SVG/blue-wave.svg"></div>
         </div>
 
-    <!-- CONTACT ME -->
-    <div id="contact">
-        <div class="contact-container">
-            <div class="left-side">
-                <div class="text-container">
-                    <h2>Want to Connect?</h2>
-                    <h4>I'm always up for a chat!</h4>
-                    <p>You can reach me out at my <a href="mailto:melissakuris@hotmail.com" class="email">email</a> or find me on my socials. Let's make something amazing!</p>
-                    <div class="socials-icon">
-                        <div class="icon-container"><a href="https://github.com/magentawitch" target="_blank"><img class="github" src="Resources/SVG/Icon/github.png"></a></div>
-                        <div class="icon-container"><a href="https://www.linkedin.com/in/melissa-kuris/" target="_blank"><img class="linkedin" src="Resources/SVG/Icon/linkedin.png"></a></div>
+        <!-- CONTACT ME -->
+        <div id="contact">
+            <div class="contact-container">
+                <div class="left-side">
+                    <div class="text-container">
+                        <h2>Want to Connect?</h2>
+                        <h4>I'm always up for a chat!</h4>
+                        <p>You can reach me out at my <a href="mailto:melissakuris@hotmail.com" class="email">email</a>
+                            or find me on my socials. Let's make something amazing!</p>
+                        <div class="socials-icon">
+                            <div class="icon-container"><a href="https://github.com/magentawitch" target="_blank"><img
+                                        class="github" src="Resources/SVG/Icon/github.png"></a></div>
+                            <div class="icon-container"><a href="https://www.linkedin.com/in/melissa-kuris/"
+                                    target="_blank"><img class="linkedin" src="Resources/SVG/Icon/linkedin.png"></a>
+                            </div>
+                        </div>
+
                     </div>
-                    
                 </div>
-            </div>
-            <div class="right-side">
-                <div class="image-container">
-                    <img class="mailbox" src="Resources/SVG/mailbox.svg">
-                    <img class="mail" src="Resources/SVG/mail.svg">
-                    <img class="flapper" src="Resources/SVG/flapper.svg">
-                    <img class="mail-background-blob" src="Resources/SVG/lilac mail background.svg">
+                <div class="right-side">
+                    <div class="image-container">
+                        <img class="mailbox" src="Resources/SVG/mailbox.svg">
+                        <img class="mail" src="Resources/SVG/mail.svg">
+                        <img class="flapper" src="Resources/SVG/flapper.svg">
+                        <img class="mail-background-blob" src="Resources/SVG/lilac mail background.svg">
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    
+
     </main>
 
 
@@ -160,6 +176,6 @@
 
 </body>
 
-
+<script src="index.js"></script>
 
 </html>

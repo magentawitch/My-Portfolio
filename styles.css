@@ -61,6 +61,10 @@ h4 {
     font-weight: 500;
 }
 
+.bold {
+    font-weight: bold;
+}
+
 .decoration-section {
     position: absolute;
     width: 100%;
@@ -412,6 +416,7 @@ button.arrow {
     align-items: center;
     gap: 2em;
     padding: 2em;
+    min-height: 7.625rem;
     border-radius: 2.5rem 0 0 0;    
     background-color: #b2dbe9;
     transform: translateY(-100%);
