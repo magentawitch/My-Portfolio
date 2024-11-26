@@ -74,7 +74,7 @@ function loadProjectCards(cards, array) {
     }
 }
 
-/* ARROWS */
+/* CAROUSEL FUNCTION */
 const leftArrow = document.getElementById("left-arrow");
 const rightArrow = document.getElementById("right-arrow");
 let cardsDisplayed = 0;
@@ -101,14 +101,7 @@ function changeEndpoint(cards, array, direction) {
             fillProjectCard(cards[i], array, targetIndex);
         }
     }
-
-    if (direction === "right" && offset + cardsDisplayed >= array.length) {
-        offset = 0; 
-    } 
 }
-
-
-
 
 
 /* EVENT LISTENERS  */
