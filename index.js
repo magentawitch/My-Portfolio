@@ -76,24 +76,35 @@ function loadProjectCards(cards, array) {
 /* ARROWS */
 const leftArrow = document.getElementById("left-arrow");
 const rightArrow = document.getElementById("right-arrow");
+let cardsDisplayed = 0;
+let newIndexToDisplay = 0;
+let lastProjectCardIndex = 0;
+let lastIndexDisplayed = 0;
 
 function changeEndpoint(cards, array, direction) {
-    let cardsDisplayed = 0;
-    let newIndexToDisplay = 0;
+
     for (i=0; i < cards.length; i++) {
         if (window.getComputedStyle(cards[i]).display !== "none") {
             cardsDisplayed++;
         }
     }
-
-    let lastIndexDisplayed = cardsDisplayed - 1;
+    lastProjectCardIndex = cardsDisplayed - 1;
+    lastIndexDisplayed = cards.length - 1;
 
     if(direction === "right") {
         newIndexToDisplay = lastIndexDisplayed + 1;
-        fillProjectCard(cards[lastIndexDisplayed], array, newIndexToDisplay);
+        fillProjectCard(cards[lastProjectCardIndex - 2], array, lastIndexDisplayed - 1);
+        fillProjectCard(cards[lastProjectCardIndex - 1], array, lastIndexDisplayed);
+        fillProjectCard(cards[lastProjectCardIndex], array, newIndexToDisplay);
+        cardsDisplayed = 0;
+        return lastIndexDisplayed
     } else {
-        newIndexToDisplay = lastIndexDisplayed - 1;
-        fillProjectCard(cards[lastIndexDisplayed], array, newIndexToDisplay);
+        newIndexToDisplay = lastIndexDisplayed - lastProjectCardIndex;
+        fillProjectCard(cards[lastProjectCardIndex], array, lastIndexDisplayed);
+        fillProjectCard(cards[lastProjectCardIndex - 1], array, lastIndexDisplayed - 1);
+        fillProjectCard(cards[lastProjectCardIndex - 2], array, newIndexToDisplay);
+        cardsDisplayed = 0;
+        return lastIndexDisplayed;
     }
 
     
