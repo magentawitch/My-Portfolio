@@ -18,6 +18,7 @@ button,
     color: #856fab;
     font-size: 1.2rem;
     font-weight: 500;
+    transition: all 200ms ease-in-out;
 }
 
 button:hover,
@@ -701,14 +702,14 @@ a.email {
 
   /* CONTACT - MAILBOX ILLUSTRATION */
 
-.mailbox {
+#mailbox {
     display: block;
     position: absolute;
     width: 50%;
     z-index: 2;
 }
 
-.mail {
+#mail {
     display: block;
     position: absolute;
     width: 20%;
@@ -717,7 +718,7 @@ a.email {
     z-index: 3;
 }
 
-.flapper {
+#flag {
     display: block;
     position: absolute;
     width: 15%;
@@ -726,7 +727,7 @@ a.email {
     z-index: 3;
 }
 
-.mail-background-blob {
+#mail-background-blob {
     display: block;
     position: absolute;
     width: 90%;
@@ -735,13 +736,13 @@ a.email {
 
 @media only screen and (min-width: 785px) and (max-width: 1049px) {
 
-    .mail {
+    #mail {
         top: 2.7rem;
         left: 5.3rem;
         z-index: 3;
     }
     
-    .flapper {
+    #flag {
         top: 3.62rem;
         left: 11.4rem;
     }
@@ -750,22 +751,22 @@ a.email {
 
 @media only screen and (min-width: 520px) and (max-width:784px) {
 
-    .mail-background-blob {
+    #mail-background-blob {
         bottom: 0;
         left: 0;
     }
 
-    .mailbox {
+    #mailbox {
         bottom: 15%;
         left: 18%;
     }
 
-    .mail {
+    #mail {
         top: 4%;
         left: 18%;
     }
 
-    .flapper {
+    #flag {
         top: 11%;
         left: 49%;
     }
@@ -774,22 +775,22 @@ a.email {
 
 @media only screen and (min-width: 425px) and (max-width: 519px) {
 
-    .mail-background-blob {
+    #mail-background-blob {
         bottom: 0;
         left: 0;
     }
 
-    .mailbox {
+    #mailbox {
         bottom: 15%;
         left: 18%;
     }
 
-    .mail {
+    #mail {
         top: 30%;
         left: 21%;
     }
 
-    .flapper {
+    #flag {
         top: 35%;
         left: 50%;
     }
@@ -797,22 +798,22 @@ a.email {
 
 @media only screen and (min-width: 351px) and (max-width: 424px) {
 
-    .mail-background-blob {
+    #mail-background-blob {
         bottom: 0;
         left: 0;
     }
 
-    .mailbox {
+    #mailbox {
         bottom: 15%;
         left: 18%;
     }
 
-    .mail {
+    #mail {
         top: 16%;
         left: 21%;
     }
 
-    .flapper {
+    #flag {
         top: 23%;
         left: 50%;
     }
@@ -820,23 +821,24 @@ a.email {
 
 @media only screen and (max-width: 350px)  {
 
-    .mail-background-blob {
+    #mail-background-blob {
         bottom: 0;
         left: 0;
     }
 
-    .mailbox {
+    #mailbox {
         bottom: 15%;
         left: 18%;
     }
 
-    .mail {
+    #mail {
         top: 23%;
         left: 20%;
     }
 
-    .flapper {
+    #flag {
         top: 30%;
         left: 49%;
     }
 }
+
