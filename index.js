@@ -14,10 +14,11 @@ const projectCardCreator = (title, description, stack, link, coverImage) => {
 }
 
 gameProjectCards.push(projectCardCreator("Whispers of the Heart", "Developed the core mechanics and interactions. It’s a platformer game and the main mechanic is switching between two worlds to overcome obstacles and advance through the adventure.", "Godot and GDScript", "https://github.com/magentawitch/WGJ23","https://placecats.com/300/500"));
-gameProjectCards.push(projectCardCreator("Fonded Grins", "Developed the core mechanics and interactions. It’s a platformer game where the player needed to collect laughs to save the townspeople from a sadness spell. Mechanics include collecting to an inventory, shooting."," Godot and GDScript","https://github.com/magentawitch/GGJ24","https://placecats.com/300/500"));
+gameProjectCards.push(projectCardCreator("Folded Grins", "Developed the core mechanics and interactions. It’s a platformer game where the player needed to collect laughs to save the townspeople from a sadness spell. Mechanics include collecting to an inventory, shooting."," Godot and GDScript","https://github.com/magentawitch/GGJ24","https://placecats.com/300/500"));
 gameProjectCards.push(projectCardCreator("Inner Link", "Developed the core mechanics and interactions. The game was a “connecting the dot” kind of game where players needed to complete an image before a specific time.", "Godot and GDScript", "https://github.com/magentawitch/WGJ24","https://placecats.com/300/500"));
 gameProjectCards.push(projectCardCreator("Despertar", "Develop the scenes, interactions between NPC’s, objects, etc using a library created for this game.", "Godot and GDScript", "https://github.com/magentawitch/despertar", "https://placecats.com/300/500"))
 gameProjectCards.push(projectCardCreator("Ecos del Vacío", "Developed the core mechanics and interactions. The game was an interactive narrative drag and drop. Players needed to drag different words to specific parts of a diary to complete the story and advance the narrative", "Godot and GDScript","https://magentawitch.itch.io/ecos-del-vacio","https://placecats.com/300/500" ));
+
 
 webDevProjectCards.push(projectCardCreator("BakeWarden", "App that checks the oven temperature and lets you control it by phone. Developed the frontend.", "Javsascript, CSS and HTML5", "https://github.com/Jbat1Jumper/bakewarden", "https://placecats.com/300/500"));
 webDevProjectCards.push(projectCardCreator("Dreambound Book Club", "Landpage for a fictional book club displaying upcoming events, offerings, different membership types.", "CSS and HTML5", "https://github.com/magentawitch/Codecademy-Responsive-Club-Website", "https://placecats.com/300/500"));
@@ -77,38 +78,36 @@ function loadProjectCards(cards, array) {
 const leftArrow = document.getElementById("left-arrow");
 const rightArrow = document.getElementById("right-arrow");
 let cardsDisplayed = 0;
-let newIndexToDisplay = 0;
-let lastProjectCardIndex = 0;
-let lastIndexDisplayed = 0;
+let offset = 0;
+
 
 function changeEndpoint(cards, array, direction) {
-
-    for (i=0; i < cards.length; i++) {
+    cardsDisplayed = 0;
+    for (i = 0; i < cards.length; i++) {
         if (window.getComputedStyle(cards[i]).display !== "none") {
             cardsDisplayed++;
         }
     }
-    lastProjectCardIndex = cardsDisplayed - 1;
-    lastIndexDisplayed = cards.length - 1;
 
-    if(direction === "right") {
-        newIndexToDisplay = lastIndexDisplayed + 1;
-        fillProjectCard(cards[lastProjectCardIndex - 2], array, lastIndexDisplayed - 1);
-        fillProjectCard(cards[lastProjectCardIndex - 1], array, lastIndexDisplayed);
-        fillProjectCard(cards[lastProjectCardIndex], array, newIndexToDisplay);
-        cardsDisplayed = 0;
-        return lastIndexDisplayed
-    } else {
-        newIndexToDisplay = lastIndexDisplayed - lastProjectCardIndex;
-        fillProjectCard(cards[lastProjectCardIndex], array, lastIndexDisplayed);
-        fillProjectCard(cards[lastProjectCardIndex - 1], array, lastIndexDisplayed - 1);
-        fillProjectCard(cards[lastProjectCardIndex - 2], array, newIndexToDisplay);
-        cardsDisplayed = 0;
-        return lastIndexDisplayed;
+    if (direction === "right") {
+        offset = (offset + 1) % array.length;
+    } else if (direction === "left") {
+        offset = (offset - 1 + array.length) % array.length;
     }
 
-    
+    for (let i = 0; i < cardsDisplayed; i++) {
+        const targetIndex = (offset + i) % array.length; 
+        if (targetIndex >= 0 && targetIndex < array.length) {
+            fillProjectCard(cards[i], array, targetIndex);
+        }
+    }
+
+    if (direction === "right" && offset + cardsDisplayed >= array.length) {
+        offset = 0; 
+    } 
 }
+
+
 
 
 
